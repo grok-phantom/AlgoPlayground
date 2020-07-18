@@ -3,4 +3,4 @@ project(AlgoPlayground)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(AlgoPlayground divide-conquer/BigProduct.cc divide-conquer/QuickSort.cc)
+add_executable(AlgoPlayground divide-conquer/QuickSort.cc)
