@@ -15,10 +15,10 @@ class WeightedUF {
     int count;           // number of components
 
   public:
-    WeightedUF(int N);
+    explicit WeightedUF(int N);
     
     // return number of components
-    int getCount();
+    [[nodiscard]] int getCount() const ;
 
     // true if p and q are int the same component, false otherwise
     bool connected(int p, int q);

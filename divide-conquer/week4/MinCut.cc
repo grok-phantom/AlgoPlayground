@@ -62,16 +62,17 @@ void LoadFile(const string &file_path, Graph &graph) {
 }
 
 int main() {
-  srand(time(NULL));
+  srand(time(nullptr));
   constexpr int SIZE = 200;
   constexpr int TIMES = 50;  // number of times to run Karger's
   int min = 200;
   Graph graph(SIZE);
-  LoadFile("../divide-conquer/kargerMinCut.txt", graph);
+  LoadFile("../divide-conquer/week4/kargerMinCut.txt", graph);
   for (int i = 0; i < TIMES; ++i) {
     int ans = kargerMinCut(graph);
     if (ans < min) min = ans;
   }
+  cout<<min<<endl;
   return 0;
 }
 

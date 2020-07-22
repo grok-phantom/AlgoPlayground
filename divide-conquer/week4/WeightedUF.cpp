@@ -9,7 +9,7 @@ WeightedUF::WeightedUF(int N) : sz(N + 1, 1), count(N) {
   for (int i = 0; i <= N; ++i) id.push_back(i);
 }
 
-int WeightedUF::getCount(){
+int WeightedUF::getCount() const{
   return count;
 }
 
