@@ -72,7 +72,7 @@ int main() {
     int ans = kargerMinCut(graph);
     if (ans < min) min = ans;
   }
-  cout<<min<<endl;
+  cout << min << endl;
   return 0;
 }
 

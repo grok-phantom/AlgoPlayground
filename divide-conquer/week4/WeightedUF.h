@@ -5,33 +5,31 @@
 #ifndef ALGOPLAYGROUND_WEIGHTEDUF_H
 #define ALGOPLAYGROUND_WEIGHTEDUF_H
 
-
 #include <vector>
 
 class WeightedUF {
-  private:
-    std::vector<int> id; // parent link (site indexed)
-    std::vector<int> sz; // size of component for roots
-    int count;           // number of components
+ private:
+  std::vector<int> id;  // parent link (site indexed)
+  std::vector<int> sz;  // size of component for roots
+  int count;            // number of components
 
-  public:
-    explicit WeightedUF(int N);
-    
-    // return number of components
-    [[nodiscard]] int getCount() const ;
+ public:
+  explicit WeightedUF(int N);
 
-    // true if p and q are int the same component, false otherwise
-    bool connected(int p, int q);
+  // return number of components
+  [[nodiscard]] int getCount() const;
 
-    // find which component p is in
-    int find(int p);
+  // true if p and q are int the same component, false otherwise
+  bool connected(int p, int q);
 
-    // create union of components p and q
-    void wfUnion(int p, int q);
+  // find which component p is in
+  int find(int p);
 
-    // get largest element in sz
-    int getMax();
+  // create union of components p and q
+  void wfUnion(int p, int q);
+
+  // get largest element in sz
+  int getMax();
 };
 
-
-#endif //ALGOPLAYGROUND_WEIGHTEDUF_H
+#endif  // ALGOPLAYGROUND_WEIGHTEDUF_H
